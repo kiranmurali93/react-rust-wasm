@@ -1,1 +1,8 @@
+# Rust specific
 /target
+**/*.rs.bk
+Cargo.lock
+
+# WASM specific
+pkg/
+*.wasm
