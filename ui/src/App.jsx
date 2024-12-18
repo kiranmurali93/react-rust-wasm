@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Calculator from './components/Calculator';
+import ShaderGenerator from './components/Shaders';
 
 function App() {
   const [activeTab, setActiveTab] = useState('calculator');
@@ -16,7 +17,7 @@ function App() {
       </div>
 
       {activeTab === 'calculator' && <Calculator />}
-      {/* {activeTab === 'shader' && <ShaderGenerator />} */}
+      {activeTab === 'shader' && <ShaderGenerator />}
     </div>
   );
 }
