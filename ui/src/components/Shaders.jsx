@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import * as THREE from "three";
 
 const ShaderTab = () => {
+    const backendURL = import.meta.env.VITE__APP_BACKEND_URL;
     const [prompt, setPrompt] = useState("");
     const [shaderCode, setShaderCode] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
@@ -16,7 +17,7 @@ const ShaderTab = () => {
         setShaderCode("");
 
         try {
-            const response = await fetch("http://localhost:4000/api/generate-shader", {
+            const response = await fetch(`${backendURL}generate-shader`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ description: prompt }),

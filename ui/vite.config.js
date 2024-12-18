@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -12,4 +13,9 @@ export default defineConfig({
   },
   // Add WASM support
   assetsInclude: ['**/*.wasm'],
+  resolve: {
+    alias: {
+      '@calculator': path.resolve(__dirname, '/pkg/calculator/')
+    }
+  }
 });

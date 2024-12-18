@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import init, * as wasm from '../../pkg/calculator';
+import init, * as wasm from '@calculator';
 
 function Calculator() {
   const [expression, setExpression] = useState('');
