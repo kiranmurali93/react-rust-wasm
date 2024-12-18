@@ -1,0 +1,15 @@
+{
+  "name": "calculator",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "calculator_bg.wasm",
+    "calculator.js",
+    "calculator.d.ts"
+  ],
+  "main": "calculator.js",
+  "types": "calculator.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
