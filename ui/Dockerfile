@@ -27,6 +27,9 @@ RUN npm ci --include=dev
 # Copy application code
 COPY . .
 
+ARG VITE__APP_BACKEND_URL
+ENV VITE_API_URL='https://elixir-llm-coms.fly.dev/api/'
+
 # Build application
 RUN npm run build
 
